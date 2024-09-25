@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="8" failures="0" errors="0" time="3.342">
+  <testsuite name="src/__tests__/sample.test.js" errors="0" failures="0" skipped="0" timestamp="2024-09-25T03:54:38" time="1.719" tests="3">
+    <testcase classname="1." name="render initial selected tab content" time="0.04">
+    </testcase>
+    <testcase classname="1." name="render only selected tab content" time="0.021">
+    </testcase>
+    <testcase classname="1." name="click on another tab should open that tab" time="0.097">
+    </testcase>
+  </testsuite>
+  <testsuite name="src/__tests__/main.test.js" errors="0" failures="0" skipped="0" timestamp="2024-09-25T03:54:38" time="2.348" tests="5">
+    <testcase classname="1." name="render initial selected tab content" time="0.039">
+    </testcase>
+    <testcase classname="1." name="render only selected tab content" time="0.024">
+    </testcase>
+    <testcase classname="1." name="click on another tab should open that tab" time="0.11">
+    </testcase>
+    <testcase classname="2." name="render only selected tab content" time="0.01">
+    </testcase>
+    <testcase classname="2." name="click on another tab should open that tab" time="0.046">
+    </testcase>
+  </testsuite>
+</testsuites>
