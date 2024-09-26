@@ -10,7 +10,7 @@ You are tasked with implementing a Tabs Component that can:
 * Display multiple tab titles.
 * Show the content of only the currently active tab.
 * Switch between tabs when the user clicks on a different tab title.
-* The parent component should be able to set an initialSelectedTab, and the Tabs component must respect that selection, setting the correct tab as active when the component first renders.
+* The parent component should be able to set an `initialSelectedTab`, and the Tabs component must respect that selection, setting the correct tab as active when the parent changes or set `initialSelectedTab`
 
 ## Requirements
 
