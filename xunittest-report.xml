@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="9" failures="0" errors="0" time="3.659">
-  <testsuite name="src/__tests__/main.test.js" errors="0" failures="0" skipped="0" timestamp="2024-09-26T07:10:20" time="1.871" tests="6">
-    <testcase classname="1." name="render initial selected tab content" time="0.044">
+<testsuites name="jest tests" tests="9" failures="0" errors="0" time="2.897">
+  <testsuite name="src/__tests__/sample.test.js" errors="0" failures="0" skipped="0" timestamp="2024-09-26T07:20:49" time="1.719" tests="3">
+    <testcase classname="1." name="render initial selected tab content" time="0.045">
     </testcase>
-    <testcase classname="1." name="render only selected tab content" time="0.025">
+    <testcase classname="1." name="render only selected tab content" time="0.023">
     </testcase>
-    <testcase classname="1." name="click on another tab should open that tab" time="0.112">
-    </testcase>
-    <testcase classname="2." name="render only selected tab content" time="0.015">
-    </testcase>
-    <testcase classname="2." name="new tab should open if initialSelectedTab gets changed" time="0.053">
-    </testcase>
-    <testcase classname="2." name="should render all tab titles" time="0.007">
+    <testcase classname="1." name="click on another tab should open that tab" time="0.109">
     </testcase>
   </testsuite>
-  <testsuite name="src/__tests__/sample.test.js" errors="0" failures="0" skipped="0" timestamp="2024-09-26T07:10:20" time="2.279" tests="3">
-    <testcase classname="1." name="render initial selected tab content" time="0.053">
+  <testsuite name="src/__tests__/main.test.js" errors="0" failures="0" skipped="0" timestamp="2024-09-26T07:20:49" time="1.803" tests="6">
+    <testcase classname="1." name="1" time="0.043">
     </testcase>
-    <testcase classname="1." name="render only selected tab content" time="0.04">
+    <testcase classname="1." name="2" time="0.025">
     </testcase>
-    <testcase classname="1." name="click on another tab should open that tab" time="0.099">
+    <testcase classname="1." name="3" time="0.113">
+    </testcase>
+    <testcase classname="2." name="4" time="0.013">
+    </testcase>
+    <testcase classname="2." name="5" time="0.05">
+    </testcase>
+    <testcase classname="2." name="6" time="0.01">
     </testcase>
   </testsuite>
 </testsuites>

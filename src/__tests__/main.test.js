@@ -6,7 +6,7 @@ import { Tabs } from '../Tabs';
 import { Tab } from '../Tab';
 
 describe('1.', () => {
-  test('render initial selected tab content', async () => {
+  test('1', async () => {
     render(
       <Tabs initialSelectedTab="LONDON">
         <Tab tabId="LONDON" label="London">
@@ -23,7 +23,7 @@ describe('1.', () => {
 
     await screen.findByText('London is the capital city of England.');
   });
-  test('render only selected tab content', async () => {
+  test('2', async () => {
     render(
       <Tabs initialSelectedTab="PARIS">
         <Tab tabId="LONDON" label="London">
@@ -48,7 +48,7 @@ describe('1.', () => {
       screen.queryByText('Tokyo is the capital of Japan.')
     ).not.toBeInTheDocument();
   });
-  test('click on another tab should open that tab', async () => {
+  test('3', async () => {
     render(
       <Tabs initialSelectedTab="LONDON">
         <Tab tabId="LONDON" label="London">
@@ -69,7 +69,7 @@ describe('1.', () => {
 });
 
 describe('2.', () => {
-  test('render only selected tab content', async () => {
+  test('4', async () => {
     render(
       <Tabs initialSelectedTab="tab-2">
         <Tab tabId="tab-1" label="Tab 1">
@@ -90,7 +90,8 @@ describe('2.', () => {
 
     expect(screen.queryByText('Tab Content 3')).not.toBeInTheDocument();
   });
-  test('new tab should open if initialSelectedTab gets changed', async () => {
+
+  test('5', async () => {
     const rendererTabs = (initialSelectedTab = 'tab-1') => (
       <Tabs initialSelectedTab={initialSelectedTab}>
         <Tab tabId="tab-1" label="Tab 1">
@@ -117,7 +118,7 @@ describe('2.', () => {
     await screen.findByText('Tab Content 3');
   });
 
-  test('should render all tab titles', async () => {
+  test('6', async () => {
     render(
       <Tabs initialSelectedTab="tab-1">
         <Tab tabId="tab-1" label="Tab 1">
