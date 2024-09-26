@@ -5,11 +5,16 @@ Each tab in a browser represents a webpage, and only the currently active tab's 
 
 You're given a minimal app setup, but the Tabs component is incomplete. You'll need to write the logic to manage the active tab and conditionally display the right content panel.
 
+You are tasked with implementing a Tabs Component that can:
+
+* Display multiple tab titles.
+* Show the content of only the currently active tab.
+* Switch between tabs when the user clicks on a different tab title.
+* The parent component should be able to set an initialSelectedTab, and the Tabs component must respect that selection, setting the correct tab as active when the component first renders.
+
 ## Requirements
-1. *Tab Navigation:* Create multiple tab elements that can be clicked, just like switching between different web pages in a browser.
-2. *Content Display:* Display only the content of the currently active tab while hiding the content of inactive tabs.
-3. *Active Tab Indication:* Visually indicate the currently active tab.
-4. *Initial Tab Selection:* The parent component should be able to set an initialSelectedTab, and the Tabs component must respect that selection, setting the correct tab as active when the component first renders.
+
+You are required to implement the Tabs component that accepts two props: initialSelectedTabId and children. The component should display the names of all the tabs and show the content of the active or selected tab's children. The initialSelectedTabId prop determines which tab is initially active when the component is rendered
 
 ## Submission Instructions
 1. Clicking "Run code" will compile and run your code against sample tests, but it will not generate scores. Click on "Execution Log" to better understand the test execution.

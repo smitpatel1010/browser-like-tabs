@@ -141,4 +141,26 @@ describe('2.', () => {
 
     await screen.findByText('Tab Content 3');
   });
+
+  test('should render all tab titles', async () => {
+    render(
+      <Tabs initialSelectedTab="tab-1">
+        <Tab tabId="tab-1" label="Tab 1">
+          Tab Content 1
+        </Tab>
+        <Tab tabId="tab-2" label="Tab 2">
+          Tab Content 2
+        </Tab>
+        <Tab tabId="tab-3" label="Tab 3">
+          Tab Content 3
+        </Tab>
+      </Tabs>
+    );
+
+    screen.getByText('Tab 1');
+
+    screen.getByText('Tab 2');
+
+    screen.getByText('Tab 3');
+  });
 });
