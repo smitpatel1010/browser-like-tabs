@@ -8,87 +8,71 @@ import { Tab } from '../Tab';
 describe('1.', () => {
   test('render initial selected tab content', async () => {
     render(
-      <Tabs initialSelectedTab="HTML">
-        <Tab tabId="HTML" label="HTML">
-          The HyperText Markup Language or HTML is the standard markup language
-          for documents designed to be displayed in a web browser.
+      <Tabs initialSelectedTab="LISTEN_NOW">
+        <Tab tabId="LISTEN_NOW" label="Listen now">
+          Listen now content
         </Tab>
-        <Tab tabId="CSS" label="CSS">
-          Cascading Style Sheets is a style sheet language used for describing
-          the presentation of a document written in a markup language such as
-          HTML or XML.
+        <Tab tabId="RADIO" label="Radio">
+          Radio content
         </Tab>
-        <Tab tabId="JS" label="JavaScript">
-          JavaScript, often abbreviated as JS, is a programming language that is
-          one of the core technologies of the World Wide Web, alongside HTML and
-          CSS.
+        <Tab tabId="LIBRARY" label="Library">
+          Library content
+        </Tab>
+        <Tab tabId="SEARCH" label="Search">
+          Search content
         </Tab>
       </Tabs>
     );
 
-    await screen.findByText(
-      'The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.'
-    );
+    await screen.findByText('Listen now content');
   });
   test('render only selected tab content', async () => {
     render(
-      <Tabs initialSelectedTab="CSS">
-        <Tab tabId="HTML" label="HTML">
-          The HyperText Markup Language or HTML is the standard markup language
-          for documents designed to be displayed in a web browser.
+      <Tabs initialSelectedTab="RADIO">
+        <Tab tabId="LISTEN_NOW" label="Listen now">
+          Listen now content
         </Tab>
-        <Tab tabId="CSS" label="CSS">
-          Cascading Style Sheets is a style sheet language used for describing
-          the presentation of a document written in a markup language such as
-          HTML or XML.
+        <Tab tabId="RADIO" label="Radio">
+          Radio content
         </Tab>
-        <Tab tabId="JS" label="JavaScript">
-          JavaScript, often abbreviated as JS, is a programming language that is
-          one of the core technologies of the World Wide Web, alongside HTML and
-          CSS.
+        <Tab tabId="LIBRARY" label="Library">
+          Library content
+        </Tab>
+        <Tab tabId="SEARCH" label="Search">
+          Search content
         </Tab>
       </Tabs>
     );
 
-    await screen.findByText(
-      'Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.'
-    );
+    await screen.findByText('Radio content');
 
-    expect(
-      screen.queryByText(
-        'The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.'
-      )
-    ).not.toBeInTheDocument();
+    expect(screen.queryByText('Listen now content')).not.toBeInTheDocument();
 
-    expect(
-      screen.queryByText(
-        'JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.'
-      )
-    ).not.toBeInTheDocument();
+    expect(screen.queryByText('Library content')).not.toBeInTheDocument();
+
+    expect(screen.queryByText('Search content')).not.toBeInTheDocument();
   });
   test('click on another tab should open that tab', async () => {
     render(
-      <Tabs initialSelectedTab="HTML">
-        <Tab tabId="HTML" label="HTML">
-          The HyperText Markup Language or HTML is the standard markup language
-          for documents designed to be displayed in a web browser.
+      <Tabs initialSelectedTab="LISTEN_NOW">
+        <Tab tabId="LISTEN_NOW" label="Listen now">
+          Listen now content
         </Tab>
-        <Tab tabId="CSS" label="CSS">
-          Cascading Style Sheets is a style sheet language used for describing
-          the presentation of a document written in a markup language such as
-          HTML or XML.
+        <Tab tabId="RADIO" label="Radio">
+          Radio content
         </Tab>
-        <Tab tabId="JS" label="JavaScript">
-          JavaScript, often abbreviated as JS, is a programming language that is
-          one of the core technologies of the World Wide Web, alongside HTML and
-          CSS.
+        <Tab tabId="LIBRARY" label="Library">
+          Library content
+        </Tab>
+        <Tab tabId="SEARCH" label="Search">
+          Search content
         </Tab>
       </Tabs>
     );
-    userEvent.click(screen.getByText('CSS'))
+    await screen.findByText('Listen now content');
 
-    await screen.findByText(
-      'Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.'
-    );
+    userEvent.click(screen.getByText('Search'));
+
+    await screen.findByText('Search content');
   });
 });

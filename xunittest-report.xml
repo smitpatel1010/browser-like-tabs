@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="9" failures="0" errors="0" time="3.022">
-  <testsuite name="src/__tests__/sample.test.js" errors="0" failures="0" skipped="0" timestamp="2024-09-26T00:16:14" time="1.803" tests="3">
-    <testcase classname="1." name="render initial selected tab content" time="0.039">
+<testsuites name="jest tests" tests="9" failures="0" errors="0" time="3.659">
+  <testsuite name="src/__tests__/main.test.js" errors="0" failures="0" skipped="0" timestamp="2024-09-26T07:10:20" time="1.871" tests="6">
+    <testcase classname="1." name="render initial selected tab content" time="0.044">
     </testcase>
     <testcase classname="1." name="render only selected tab content" time="0.025">
     </testcase>
-    <testcase classname="1." name="click on another tab should open that tab" time="0.102">
+    <testcase classname="1." name="click on another tab should open that tab" time="0.112">
+    </testcase>
+    <testcase classname="2." name="render only selected tab content" time="0.015">
+    </testcase>
+    <testcase classname="2." name="new tab should open if initialSelectedTab gets changed" time="0.053">
+    </testcase>
+    <testcase classname="2." name="should render all tab titles" time="0.007">
     </testcase>
   </testsuite>
-  <testsuite name="src/__tests__/main.test.js" errors="0" failures="0" skipped="0" timestamp="2024-09-26T00:16:14" time="2.063" tests="6">
-    <testcase classname="1." name="render initial selected tab content" time="0.042">
+  <testsuite name="src/__tests__/sample.test.js" errors="0" failures="0" skipped="0" timestamp="2024-09-26T07:10:20" time="2.279" tests="3">
+    <testcase classname="1." name="render initial selected tab content" time="0.053">
     </testcase>
-    <testcase classname="1." name="render only selected tab content" time="0.025">
+    <testcase classname="1." name="render only selected tab content" time="0.04">
     </testcase>
-    <testcase classname="1." name="click on another tab should open that tab" time="0.096">
-    </testcase>
-    <testcase classname="2." name="render only selected tab content" time="0.009">
-    </testcase>
-    <testcase classname="2." name="new tab should open if initialSelectedTab gets changed" time="0.046">
-    </testcase>
-    <testcase classname="2." name="should render all tab titles" time="0.008">
+    <testcase classname="1." name="click on another tab should open that tab" time="0.099">
     </testcase>
   </testsuite>
 </testsuites>

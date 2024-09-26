@@ -8,88 +8,63 @@ import { Tab } from '../Tab';
 describe('1.', () => {
   test('render initial selected tab content', async () => {
     render(
-      <Tabs initialSelectedTab="HTML">
-        <Tab tabId="HTML" label="HTML">
-          The HyperText Markup Language or HTML is the standard markup language
-          for documents designed to be displayed in a web browser.
+      <Tabs initialSelectedTab="LONDON">
+        <Tab tabId="LONDON" label="London">
+          London is the capital city of England.
         </Tab>
-        <Tab tabId="CSS" label="CSS">
-          Cascading Style Sheets is a style sheet language used for describing
-          the presentation of a document written in a markup language such as
-          HTML or XML.
+        <Tab tabId="PARIS" label="Paris">
+          Paris is the capital of France.
         </Tab>
-        <Tab tabId="JS" label="JavaScript">
-          JavaScript, often abbreviated as JS, is a programming language that is
-          one of the core technologies of the World Wide Web, alongside HTML and
-          CSS.
+        <Tab tabId="TOKYO" label="Tokyo">
+          Tokyo is the capital of Japan.
         </Tab>
       </Tabs>
     );
 
-    await screen.findByText(
-      'The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.'
-    );
+    await screen.findByText('London is the capital city of England.');
   });
   test('render only selected tab content', async () => {
     render(
-      <Tabs initialSelectedTab="CSS">
-        <Tab tabId="HTML" label="HTML">
-          The HyperText Markup Language or HTML is the standard markup language
-          for documents designed to be displayed in a web browser.
+      <Tabs initialSelectedTab="PARIS">
+        <Tab tabId="LONDON" label="London">
+          London is the capital city of England.
         </Tab>
-        <Tab tabId="CSS" label="CSS">
-          Cascading Style Sheets is a style sheet language used for describing
-          the presentation of a document written in a markup language such as
-          HTML or XML.
+        <Tab tabId="PARIS" label="Paris">
+          Paris is the capital of France.
         </Tab>
-        <Tab tabId="JS" label="JavaScript">
-          JavaScript, often abbreviated as JS, is a programming language that is
-          one of the core technologies of the World Wide Web, alongside HTML and
-          CSS.
+        <Tab tabId="TOKYO" label="Tokyo">
+          Tokyo is the capital of Japan.
         </Tab>
       </Tabs>
     );
 
-    await screen.findByText(
-      'Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.'
-    );
+    await screen.findByText('Paris is the capital of France.');
 
     expect(
-      screen.queryByText(
-        'The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.'
-      )
+      screen.queryByText('London is the capital city of England.')
     ).not.toBeInTheDocument();
 
     expect(
-      screen.queryByText(
-        'JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.'
-      )
+      screen.queryByText('Tokyo is the capital of Japan.')
     ).not.toBeInTheDocument();
   });
   test('click on another tab should open that tab', async () => {
     render(
-      <Tabs initialSelectedTab="HTML">
-        <Tab tabId="HTML" label="HTML">
-          The HyperText Markup Language or HTML is the standard markup language
-          for documents designed to be displayed in a web browser.
+      <Tabs initialSelectedTab="LONDON">
+        <Tab tabId="LONDON" label="London">
+          London is the capital city of England.
         </Tab>
-        <Tab tabId="CSS" label="CSS">
-          Cascading Style Sheets is a style sheet language used for describing
-          the presentation of a document written in a markup language such as
-          HTML or XML.
+        <Tab tabId="PARIS" label="Paris">
+          Paris is the capital of France.
         </Tab>
-        <Tab tabId="JS" label="JavaScript">
-          JavaScript, often abbreviated as JS, is a programming language that is
-          one of the core technologies of the World Wide Web, alongside HTML and
-          CSS.
+        <Tab tabId="TOKYO" label="Tokyo">
+          Tokyo is the capital of Japan.
         </Tab>
       </Tabs>
     );
-    userEvent.click(screen.getByText('CSS'));
+    userEvent.click(screen.getByText('Paris'));
 
-    await screen.findByText(
-      'Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.'
-    );
+    await screen.findByText('Paris is the capital of France.');
   });
 });
 
